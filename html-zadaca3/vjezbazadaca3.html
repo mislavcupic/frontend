@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript">
+      function odabirAuta() {
+        var auti = document.getElementById("auti");
+        if (auti.value == "Mercedes") {
+          return (document.getElementById("osnovna").value = "340000");
+        } else if (auti.value == "Suzuki") {
+          return (document.getElementById("osnovna").value = "250000");
+        } else if (auti.value == "Spaček") {
+          return (document.getElementById("osnovna").value = "50000");
+        } else if (auti.value == "Ford") {
+          return (document.getElementById("osnovna").value = "100000");
+        } else return (document.getElementById("osnovna").value = "127000");
+      }
+    </script>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html>
+      <body onload="odabirAuta()">
+        <form
+          action="#"
+          method="GET"
+          enctype="text/plain"
+          autocomplete="on"
+          oninput="zbroj.value=(parseInt(osnovna.value)+parseInt(dodatna.value))"
+        >
+          <label for="auti"
+            >Odaberite željeni automobil-prikaz osnovne cijene:</label
+          >
+          <select id="auti" name="auti" onchange="odabirAuta()">
+            <!--size - atributom se može odrediti koliko će se kućica vidjeti-->
+            <optgroup label="njemački automobili">Njemački automobili</optgroup>
+            <option name="Mercedes" value="Mercedes" id="auti">Mercedes</option>
+            <option name="ww" value="WW">WW</option>
+            <option name="Audi" value="Audi" id="auti">Audi</option>
+            <optgroup label="talijanski automobili">
+              Talijanski automobili
+            </optgroup>
+            <option name="Fiat" value="Fiat" id="auti">Fiat</option>
+            <option name="AR" id="auti" value="ARomeo">Alfa Romeo</option>
+            <optgroup label="Ruski automobili">Ruski automobili</optgroup>
+            <option name="Lada" value="Lada">Lada</option>
+            <optgroup label="američki automobili">SAD automobili</optgroup>
+            <option name="Ford" value="Ford">Ford</option>
+            <option name="Chevrolet">Chevrolet</option>
+          </select>
+          <br /><br />
+          <label for="osnovna" name="cijene">Osnovna cijena automobila:</label>
+          <input type="text" id="osnovna" name="cijene" value="" />
+          <!--"zbroj.value=(parseInt(osnovna.value)+parseInt(dodatna.value))"-->
+          <label for="dodatnacijena" name="cijene">Dodatna cijena:</label>
+          <input
+            type="range"
+            min="0"
+            max="20000"
+            name="cijene"
+            id="dodatnacijena"
+            value="dodatna"
+            oninput="this.nextElementSibling.value = this.value"
+          />
+          <input type="text" name="dodatnacijena" id="dodatna" name="cijene" />
+          <output name="zbroj" for="osnovna dodatna"></output><br /><br /><br />
+        </form>
+      </body>
+    </html>
+  </body>
+</html>

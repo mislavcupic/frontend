@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Mislav Čupić" />
+    <meta name="keywords" content="HTML,school,Algebra" />
+    <meta name="description" content="ovdje učimo programirati za web" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--NASLOVI-->
+    <h1>NASLOV RAZINA 1</h1>
+    <h2>NASLOV RAZINA 2</h2>
+    <h3>NASLOV RAZINA 3</h3>
+    <h4>NASLOV RAZINA 4</h4>
+    <h5>NASLOV RAZINA 5</h5>
+    <h6>NASLOV RAZINA 6</h6>
+
+    <!--paragraf-->
+    <p>
+      Ovo je moj odsječak teksta, upamtite, veliki razmaci se ne prikazuju u
+      html - u!
+    </p>
+
+    <ul>
+      <h5>Lista namirnica za dućan</h5>
+      <li>Brašno</li>
+      <li>Mlijeko</li>
+      <li>Naranče</li>
+      <li>Jabuke</li>
+      <li>Kruh</li>
+    </ul>
+    <ul>
+      <h5>Tablica poretka</h5>
+      <li>Dinamo</li>
+      <li>Hajduk</li>
+      <li>Osijek</li>
+      <li>Rijeka</li>
+      <li>Šibenik</li>
+    </ul>
+
+    <dl>
+      <dt>Konj</dt>
+      <dd>Životinja s dugim licem</dd>
+      <dt>Pas</dt>
+      <dd>Prvi dio psovke ili kućni ljubimac</dd>
+      <dt>Mačka</dt>
+      <dd>Životinja koja iritira pse ukoliko nisu odrasli zajedno</dd>
+    </dl>
+    <table style="color: rgb(16, 16, 68)">
+      <thead>
+        <th>Ovo je table header</th>
+      </thead>
+      <tr>
+        <td>Stupac 1</td>
+        <td>Stupac 2</td>
+      </tr>
+      <tr>
+        <td>120</td>
+        <td>130</td>
+      </tr>
+      <tr>
+        <tfoot>
+          <th>Ovo je table footer</th>
+        </tfoot>
+      </tr>
+    </table>
+
+    <table border="2" width="400" height="350">
+      <colgroup>
+        <col span="1" style="background-color: rgb(26, 65, 220)" />
+        <col span="2" style="background-color: rgb(26, 220, 217)" />
+        <col span="1" style="background-color: rgb(220, 26, 26)" />
+      </colgroup>
+      <tr>
+        <td rowspan="2">0</td>
+        <td>0</td>
+        <td>0</td>
+        <td rowspan="4">0</td>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td rowspan="3">0</td>
+      </tr>
+      <tr>
+        <td colspan="2">0</td>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+    </table>
+    <a href="/00-moje/index.html">Vrati se na početnu</a>
+    <!-- Naslovi -->
+    <h1>Najveci naslov</h1>
+    <h3>Naslov razine 3</h3>
+    <h6>Naslov razine 6</h6>
+
+    <!-- Paragraf -->
+    <p>
+      Ovo je moj odsječak teksta.<br /><br /><br />
+      Upamtite ve liki razmaci se ne prikazuju u htmlu.
+    </p>
+
+    <!-- Preformatirani tekst -->
+    <pre>
+      DObar dan.
+      Ja sam novi red sa                      razmakom
+    </pre>
+
+    <!-- Elementi za oblikovanje teksta -->
+    <b>Lorem ipsum dolor</b>
+    <strong>Lorem ipsum dolor</strong>
+    <i>Lorem ipsum dolor</i>
+    <em>Lorem ipsum dolor</em>
+    <mark>Lorem ipsum dolor</mark>
+    <small>Lorem ipsum dolor</small>
+    <del>Lorem ipsum dolor</del>
+    <ins>Lorem ipsum dolor</ins>
+    X<sub>2</sub> X<sup>2</sup>
+
+    <!--Nepobrojana lista-->
+    <h4>Lista za nabavu</h4>
+    <ul>
+      <li>Kruh</li>
+      <li>Mlijeko</li>
+      <li>Sir</li>
+    </ul>
+
+    <!--Pobrojana lista-->
+    <h4>Tablica HNL</h4>
+    <ol>
+      <li>Šibenik</li>
+      <li>Rijeka</li>
+      <li>Dinamo</li>
+    </ol>
+
+    <!--Data lista-->
+    <h4>Definicije riječi</h4>
+    <dl>
+      <dt>Fakat</dt>
+      <dd>
+        Znači isto kao riječ uistinu. Koriste je ljudi kada su puno izloženi
+        magli.
+      </dd>
+      <dt>Tentati</dt>
+      <dd>Znači nekoga izluđivati ponovljenim zahtjevima.</dd>
+    </dl>
+
+    <!-- Tablica -->
+    <table border="1">
+      <colgroup>
+        <col span="2" style="background-color: rgb(4, 9, 97)" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Stupac 1</th>
+          <th colspan="2">Stupac 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>prva ćelija u prvom redu</td>
+          <td>druga ćelija u prvom redu</td>
+        </tr>
+        <tr>
+          <td>prva ćelija u drugom redu</td>
+          <td>druga ćelija u drugom redu</td>
+          <td rowspan="2">treća ćelija u drugom redu</td>
+        </tr>
+        <tr>
+          <td>treci red</td>
+          <td></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <td colspan="3">Footer</td>
+      </tfoot>
+    </table>
+  </body>
+</html>

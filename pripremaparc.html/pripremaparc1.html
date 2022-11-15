@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Autor" content="Vinko Frontendić" />
+    <meta
+      name="keywords"
+      content="vrhunsko vino, babić, dingač, crno, bijelo"
+    />
+    <meta
+      name="description"
+      content="najbolja vinarija u RH, proizvodimo vina cijelih mjesec dana!"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/00-moje/pripremaparc.html/style.css"
+    />
+    <title>Hotel California</title>
+    <script>
+      function promjeniBoju() {
+        var test = console.log;
+        test = "Hej,ušao sam u funkciju";
+        var boja = document.getElementById("#clanak");
+        document
+          .getElementById("#clanak")
+          .addEventListener("click", change_color);
+
+        var kliknut = false;
+        if (kliknut) {
+          boja.style.backgroundColor("yellow");
+        }
+      }
+      function change_color() {
+        document.body.style.color = "orange";
+        document.getElementById("#clanak");
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav
+        class="naslovi"
+        style="background-color: black"
+        width="100%"
+        height="100vh"
+      >
+        <ul>
+          <li><a href="#oNama">O nama</a></li>
+          <li><a href="#proizvodi">Proizvodi</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+    <hr />
+    <main>
+      <section id="oNama">
+        <header>
+          <h2>Naši proizvodi</h2>
+          <article>
+            <a href id="#clanak" onclick="promjeniBoju()"
+              >moj jako bitan članak</a
+            >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
+            possimus. Qui totam harum aut repellat necessitatibus quod eligendi
+            aspernatur consectetur nemo magni labore molestiae quasi sequi
+            consequatur repudiandae, nisi quos!Lorem Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Vero soluta sed nisi consectetur, sint
+            necessitatibus ad? Tenetur aut pariatur ea quaerat veritatis quo
+            voluptates perferendis. Est ad expedita corporis laudantium.
+            <p id="clanak">
+              Ovaj dio je moj jako bitan dio koji želim istaknuti
+            </p>
+          </article>
+        </header>
+        <!-- <picture> <img src="" </picture> -->
+      </section>
+      <h3>Mjesta gdje nas možete pronaći</h3>
+      <section id="kontakt">
+        <header>
+          <article>Javite nam se na mob</article>
+        </header>
+      </section>
+      <section id="proizvodi">
+        <header>
+          <article>
+            <picture>
+              <source
+                media="(min-width:900px)"
+                srcset="istockphoto-1297401631-170667a.jpg"
+              />
+              <source
+                media="(min-width:465px)"
+                srcset="istockphoto-1297401631-170667aManjaKOpija.jpg"
+              />
+              <img
+                src="istockphoto-1297401631-170667avećaKopija.jpg"
+                alt="Vina"
+                style="width: auto"
+              />
+            </picture>
+          </article>
+        </header>
+      </section>
+    </main>
+  </body>
+</html>

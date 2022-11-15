@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Domaća zadaća 3</title>
+    <!-- <script>
+      function brojGodina(y) {
+        y = y.getElementById("datumRodj");
+        if (y <= 18) {
+          console.log("Osoba je maloljetna");
+        }
+      }
+    </script> -->
+    <style></style>
+    <script type="text/javascript">
+      function odabirAuta() {
+        var auti = document.getElementById("auti");
+        if (auti.value == "Mercedes") {
+          document.getElementById("dodatnacijena").min = "0";
+          document.getElementById("dodatnacijena").max = "120000";
+          return (document.getElementById("osnovna").value = "340000");
+        } else if (auti.value == "WW") {
+          document.getElementById("dodatnacijena").min = "0";
+          document.getElementById("dodatnacijena").max = "90000";
+          return (document.getElementById("osnovna").value = "250000");
+        } else if (auti.value == "Audi") {
+          document.getElementById("dodatnacijena").min = "0";
+          document.getElementById("dodatnacijena").max = "76000";
+          return (document.getElementById("osnovna").value = "50000");
+        } else if (auti.value == "Ford") {
+          document.getElementById("dodatnacijena").min = "0";
+          document.getElementById("dodatnacijena").max = "45000";
+          return (document.getElementById("osnovna").value = "100000");
+        } else {
+          document.getElementById("dodatnacijena").max = "24500";
+        }
+        return (document.getElementById("osnovna").value = "127000");
+
+        function datum() {
+          var godine =
+            document.getElementById("vrijemeSad").value -
+            document.getElementById("rođendan").value;
+          return godine.toString();
+        }
+      }
+    </script>
+  </head>
+  <body onload="odabirAuta()" onload="datum()">
+    <!--20 formi-->
+    <!--INPUT TYPE-->
+
+    <form
+      action="#"
+      method="GET"
+      enctype="text/plain"
+      autocomplete="on"
+      oninput="zbroj.value=(parseInt(osnovna.value)+parseInt(dodatna.value))"
+      oninput="godineizračun.value=(parseInt(datum().value)-parseInt(rođendan.value))"
+    >
+      <fieldset style="background-color: rgb(161, 118, 240)">
+        <legend>Demografski podaci</legend>
+        <hr />
+        <label for="ime" name="ime">Upiši ime:</label>
+        <input type="text" id="ime" name="ime" required validation="on" />
+        <hr />
+        <label for="prezime" name="prezime">Upiši prezime:</label>
+        <input
+          type="text"
+          id="prezime"
+          name="prezime"
+          required
+          validation="on"
+        />
+        <hr />
+        <label for="OIB">Unesite oib:</label>
+        <input
+          type="text"
+          name="OIB"
+          id="OIB"
+          required
+          minlength="11"
+          maxlength="11"
+          validation="on"
+        />
+        <br />
+        <hr />
+
+        <label for="datumRodj" name="datumRodj">Odaberi datum rođenja:</label>
+        <input type="date" id="datumRodj" min="1930-01-01" max="2004-01-01" />
+        <!--paziti na način pisanja datuma min i max godina, pa 01, 02,-->
+        <br />
+        <hr />
+        <p>Odabir spola:</p>
+        <!--sjeti se da se po atributu 'name' formiraju odabiri glede radio buttona, u svakoj kombinaciji (inputa i labela - for i id se povezuju, i name-ovi u labelu i inputu)-->
+        <input type="radio" value="M" id="muški" name="spol" />
+        <label for="muški" name="spol">Muški</label><br />
+        <input type="radio" value="ženski" id="ženski" name="spol" />
+        <label for="ženski" name="spol">Ženski</label><br />
+        <input type="radio" value="svemirac" name="spol" id="svemirko" />
+        <label for="svemirko" name="spol">Svemirko</label>
+
+        <hr />
+
+        <br />
+        <hr />
+
+        <label for="fotografija" name="fotografija">Dodaj fotografiju:</label>
+        <input type="file" id="fotografija" accept=".jpg .jpeg .png" />
+
+        <hr />
+        <fieldset>
+          <legend>Autentikacija:</legend>
+          <!-- nisam poriktao settings da mi otvori localhost stranicu-->
+          <label for="userName" margin-left="10px"> Korisničko ime: </label
+          ><br />
+          <input type="text" name="userName" id="userName" margin-left="10px" />
+          <br />
+          <label for="password" name="password">Unesite password:</label><br />
+          <input type="password" name="password" id="password" /><br />
+        </fieldset>
+
+        <hr />
+      </fieldset>
+      <fieldset style="background-color: rgb(202, 131, 131)">
+        <legend>Informacije o kupcu</legend>
+        <label for="auti"
+          >Odaberite željeni automobil-prikaz osnovne cijene:</label
+        >
+        <select id="auti" name="auti" onchange="odabirAuta()">
+          <!--size - atributom se može odrediti koliko će se kućica vidjeti-->
+          <optgroup label="njemački automobili">Njemački automobili</optgroup>
+          <option name="Mercedes" value="Mercedes" id="auti">Mercedes</option>
+          <option name="ww" value="WW">WW</option>
+          <option name="Audi" value="Audi" id="auti">Audi</option>
+          <optgroup label="talijanski automobili">
+            Talijanski automobili
+          </optgroup>
+          <option name="Fiat" value="Fiat" id="auti">Fiat</option>
+          <option name="AR" id="auti" value="ARomeo">Alfa Romeo</option>
+          <optgroup label="Ruski automobili">Ruski automobili</optgroup>
+          <option name="Lada" value="Lada">Lada</option>
+          <optgroup label="američki automobili">SAD automobili</optgroup>
+          <option name="Ford" value="Ford">Ford</option>
+          <option name="Chevrolet">Chevrolet</option>
+        </select>
+        <br /><br />
+        <br /><br />
+        <label for="lokacija">Odaberite željenu lokaciju za kupnju:</label
+        ><br />
+        <input list="lokacije" name="grad" id="lokacija" />
+        <!--sjeti se...label for i id se poklapaju, input lista = naziv same liste (ne name, nego input list=primjerice lokacije) i datalist id se moraju zvati isto-logično-->
+        <datalist id="lokacije">
+          <option value="Zagreb"></option>
+          <option value="Zadar"></option>
+          <option value="Pula"></option>
+          <option value="Čakovec"></option>
+        </datalist>
+        <br />
+        <br />
+        <p>Odaberi automobile koji dolaze u obzir za kupnju:</p>
+        <label for="Bmw" name="odabir">Bmw</label>
+        <input
+          type="checkbox"
+          value="Bmw"
+          id="Bmw"
+          name="odabir"
+          value="Bmw"
+        /><br />
+
+        <label for="Mercedes" name="odabir">Mercedes</label>
+        <input
+          type="checkbox"
+          value="Mercedes"
+          id="Mercedes"
+          name="odabir"
+        /><br />
+        <label for="Fiat" name="odabir">Fiat</label>
+        <input type="checkbox" id="Fiat" name="odabir" /><br />
+        <label for="Suzuki" name="odabir">Suzuki</label>
+        <input type="checkbox" name="odabir" id="Suzuki" /><br />
+        <label for="Spaček" name="odabir">Spaček</label>
+        <input type="checkbox" name="odabir" id="Spaček" /><br />
+        <br />
+        <br />
+        <input
+          type="submit"
+          class="btn btn-alert"
+          value="Spremi odabire"
+          name="Spremi"
+        />
+        <br />
+        <p>Koju ste cijenu voljni izdvojiti za automobil iz ponude?</p>
+        <br />
+        <label for="osnovna" name="cijene">Osnovna cijena automobila:</label>
+        <input type="text" id="osnovna" name="cijene" value="" />
+        <!--"zbroj.value=(parseInt(osnovna.value)+parseInt(dodatna.value))"-->
+        <label for="dodatnacijena" name="cijene">Dodatna cijena:</label>
+        <input
+          type="range"
+          name="cijene"
+          id="dodatnacijena"
+          value=""
+          onchange="odabirAuta()"
+          oninput="this.nextElementSibling.value = this.value"
+        />
+        <input type="text" name="dodatnacijena" id="dodatna" name="cijene" />
+        <output name="zbroj" for="osnovna dodatna"></output><br /><br /><br />
+
+        <label for="vrijemeSad" name="vrijeme">Današnji datum i godina</label
+        ><br />
+        <input type="date" name="vrijeme" id="vrijemeSad" value="" /><br />
+        <label for="rođendan" name="vrijeme">Datum rođenja</label><br />
+        <input
+          type="date"
+          name="vrijeme"
+          id="rođendan"
+          value=""
+          oninput="this.nextElementSibling.value = datum()"
+        /><br />
+        <output name="godineizračun" for="vrijemeSad rođendan"></output><br />
+        <label for="vrijeme" name="godine">Godine</label>
+        <input type="text" name="vrijeme" id="vrijeme" value="" />
+        <br /><br />
+      </fieldset>
+    </form>
+
+    <br /><br /><br />
+  </body>
+</html>

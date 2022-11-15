@@ -1,0 +1,19 @@
+/* html { 
+    background: url(/00-moje/html-zadaca1/Art-3D-Background.jpeg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.9;
+  } */
+
+html {
+    background-image: url("https://wallpaperaccess.com/full/1903844.jpg"); background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+
+   }
+
+   
+  
