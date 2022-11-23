@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        /* display: inline-block; */
+      }
+      p {
+        box-sizing: border-box;
+        position: fixed;
+        width: 1500px;
+        height: 100px;
+        top: 250px;
+        left: 8px;
+        right: 8px;
+      }
+      .box1 {
+        background: red;
+        width: 400px;
+        height: 200px;
+        box-sizing: border-box;
+        top: 5px;
+        left: 5px;
+        position: relative;
+      }
+      .paragraf {
+        border: 4mm dashed brown;
+      }
+
+      .box2 {
+        background: blue;
+        width: 500px;
+        height: 300px;
+        left: 500px;
+        top: 200px;
+        bottom: 100px;
+        position: relative;
+      }
+
+      .box3 {
+        background: red;
+        width: 100px;
+        height: 100px;
+        top: 100px;
+        position: absolute;
+
+        right: 10px;
+      }
+      .box4 {
+        background: red;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        border-radius: 50%;
+
+        right: 10px;
+        bottom: 5px;
+      }
+    </style>
+    <title>Vjezba</title>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <div class="box2">
+      <div class="box3"></div>
+    </div>
+
+    <div class="box4"></div>
+    <p class="paragraf">OVO JE PARAGRAF</p>
+  </body>
+</html>
