@@ -1,0 +1,62 @@
+@import url("/00-moje/css-vjezbanje/colors.css");
+body{
+    margin:1em;
+    
+}
+
+section{
+    border:0.1cm;
+    border-color: red;
+
+
+     h1{
+        color: $color-secondary;
+    font-size: 1.3em;
+    font-style:italic;
+    color:black;
+    background-color: aqua;
+     }
+
+     p{
+    font-size:1.1em;
+    text-align: center;
+    text-decoration: overline;
+    text-shadow: 1px;
+    color: aqua;
+    font-variant: normal;
+    border-color: red;
+     }
+
+     p:hover{
+    font-size:1.5em;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 1px;
+    color: red;
+    font-variant: normal;
+    border-color: yellow;
+     }
+    }
+section{
+
+     article{
+border-top: 5%;
+
+         h1{
+        font-size: 1.3em;
+        font-style:italic;
+        color:black;
+        background-color: rebeccapurple;
+          }
+    
+           p{
+        font-size:1.1em;
+        text-align: center;
+        text-decoration: overline;
+        text-shadow: 1px;
+        color: violet;
+        font-variant: normal;
+        border-color: aqua;
+          }
+        }
+    }

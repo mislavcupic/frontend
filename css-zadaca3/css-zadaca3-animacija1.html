@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transformacija 1</title>
+  </head>
+  <style>
+    .box1 {
+      background-color: red;
+      opacity: 0.7;
+      box-sizing: border-box;
+      border: 2mm;
+    }
+    div {
+      animation: animacija1 1s ease-in-out 1s infinite alternate;
+      position: relative;
+      width: 200px;
+      height: 80px;
+      display: inline-block;
+      left: 45%;
+      border-radius: 20%;
+    }
+
+    @keyframes animacija1 {
+      0% {
+        width: 200px;
+        height: 80px;
+        left: 45%;
+        right: 450px;
+        top: 10px;
+      }
+      100% {
+        width: 50px;
+        height: 80px;
+        top: 150px;
+        left: 50%;
+        background-color: grey;
+      }
+    }
+  </style>
+  <body>
+    <div class="box1"></div>
+  </body>
+</html>

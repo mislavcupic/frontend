@@ -1,0 +1,55 @@
+ @import 'variables.scss';
+@mixin par {
+    margin: 5px;
+    line-height: 50px;
+    text-align: center;
+
+    %spaces{
+        display:flex;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+    }
+}
+.container {
+    
+    @include spaces;
+
+    :nth-child(3):hover{
+        order: 1;
+        width:5%;
+        height:50px;
+        border: 3px solid $colorperu;
+        background-color: $colorblue;
+        color: $colorred;
+        box-sizing: border-box;
+        @include par;
+    }
+
+    .item{
+        width:23%;
+        height:50px;
+        border: 3px solid $colorred;
+        background-color: black;
+        color: white;
+        box-sizing: border-box;
+        @include par;
+       
+        
+            &:hover{
+              width:23%;
+              height: 50px;
+            }
+}
+   
+}
+
+    
+
+    // :nth-child(2):hover{
+    //     color:red;
+    //     background-color: white;
+    // }
+
+
+
+

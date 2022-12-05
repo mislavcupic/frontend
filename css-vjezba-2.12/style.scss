@@ -1,0 +1,71 @@
+@import url(/00-moje/css-vjezba-2.12/colors.css);
+
+ @mixin flex-props($direction){
+    display: flex;
+    justify-content: space-between;
+    flex-direction: $direction;
+ }
+
+
+
+$colorred: red;
+$colorgreen: green;
+$line-prop: 10px;
+div{
+    @include flex-props(row);
+    .container{
+   
+       
+    box-sizing: border-box;
+    position:relative;
+    background-color: green;
+    margin-bottom: 1%;
+    }
+    .box{
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        display: inline;
+        top:150px;
+        position: relative;
+        border-color: red;
+        border-style: solid;
+        border-width: 0.1mm;
+        background-color: green;
+    
+        
+        width:100px;
+        padding:0.5%;
+   
+        
+    }
+}
+
+div{
+    @include flex-props(row-reverse);
+    .container2{
+  
+  
+    box-sizing: border-box;
+    position:relative;
+    background-color: green;
+    }
+    .box{
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        display: inline;
+        top:150px;
+        position: relative;
+        border-color: red;
+        border-style: solid;
+        border-width: 0.1mm;
+        background-color: green;
+    
+        
+        width:100px;
+        padding:0.5%;
+   
+        
+    }
+}

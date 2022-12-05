@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transformacija 1</title>
+  </head>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+    }
+    div {
+      top: 200px;
+      left: 600px;
+
+      border-width: 10px;
+      border-color: rgb(20, 250, 8);
+      box-sizing: border-box;
+      border-style: solid;
+      position: relative;
+    }
+    @keyframes gornja {
+      from {
+        border-top-color: white;
+      }
+
+      to {
+        animation: gornja 1s ease-in-out 0s infinite forwards;
+        border-top-color: black;
+      }
+    }
+
+    @keyframes desna {
+      from {
+        border-right-color: white;
+      }
+
+      to {
+        animation: desna 1s ease-in-out 3s infinite forwards;
+        border-right-color: black;
+      }
+    }
+
+    @keyframes donja {
+      from {
+        border-bottom-color: white;
+      }
+
+      to {
+        animation: donja 1s ease-in-out 6s infinite forwards;
+        border-bottom-color: black;
+      }
+    }
+
+    @keyframes lijeva {
+      from {
+        border-left-color: white;
+      }
+
+      to {
+        border-left-color: black;
+        animation: lijeva 1s ease-in-out 9s infinite forwards;
+      }
+    }
+  </style>
+
+  <body>
+    <div class="box"><span>Hej</span></div>
+  </body>
+</html>

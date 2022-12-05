@@ -1,0 +1,15 @@
+.container{
+    border-style: dotted;
+    border: 1mm;
+    display: flex;
+}
+
+.item{
+    background-color: aqua;
+    display: inline-block;
+    width: 20%;
+    height: 100px;
+    margin:2%
+
+    
+}
