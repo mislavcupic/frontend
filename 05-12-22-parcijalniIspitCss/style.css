@@ -36,6 +36,7 @@ html .flex-container {
   flex-direction: row;
   position: relative;
   opacity: 0.3;
+  flex-shrink: 1;
   top: -300px;
   flex: 100%;
 }
