@@ -6,12 +6,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 6em;
 }
 @media (max-width: 800px) {
   body .flex-container {
     flex-direction: column;
     flex-wrap: wrap;
+    line-height: 50%;
   }
 }
 @-webkit-keyframes animation {
@@ -19,7 +19,7 @@ body {
     top: -300px;
   }
   100% {
-    top: 600px;
+    top: 400px;
   }
 }
 @keyframes animation {
@@ -27,7 +27,7 @@ body {
     top: -300px;
   }
   100% {
-    top: 600px;
+    top: 400px;
   }
 }
 body .flex-container {
@@ -35,19 +35,20 @@ body .flex-container {
   justify-content: space-around;
   flex-direction: row;
   position: relative;
-  opacity: 0.3;
-  flex-shrink: 1;
-  top: -300px;
-  flex: 100%;
+  opacity: 0.7;
+  flex-basis: 24%;
+  font-size: 8vw;
 }
 body .flex-container .item1 {
-  width: 200px;
-  height: 200px;
-  line-height: 200px;
+  flex-basis: 25vw;
+  width: 20vw;
+  height: 35vh;
+  line-height: 35vh;
   text-align: center;
   position: relative;
   margin: 1%;
   border: 3px solid white;
+  flex-shrink: 3;
   -webkit-animation-name: animation;
           animation-name: animation;
   -webkit-animation-duration: 3s;
@@ -62,13 +63,15 @@ body .flex-container .item1 {
   color: white;
 }
 body .flex-container .item2 {
-  width: 200px;
-  height: 200px;
-  line-height: 200px;
+  flex-basis: 25vw;
+  width: 20vw;
+  height: 35vh;
+  line-height: 35vh;
   text-align: center;
   position: relative;
   margin: 1%;
   border: 3px solid white;
+  flex-shrink: 3;
   -webkit-animation-name: animation;
           animation-name: animation;
   -webkit-animation-duration: 3s;
@@ -83,13 +86,15 @@ body .flex-container .item2 {
   color: white;
 }
 body .flex-container .item3 {
-  width: 200px;
-  height: 200px;
-  line-height: 200px;
+  flex-basis: 25vw;
+  width: 20vw;
+  height: 35vh;
+  line-height: 35vh;
   text-align: center;
   position: relative;
   margin: 1%;
   border: 3px solid white;
+  flex-shrink: 3;
   -webkit-animation-name: animation;
           animation-name: animation;
   -webkit-animation-duration: 3s;
