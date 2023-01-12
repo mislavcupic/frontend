@@ -1,0 +1,108 @@
+.calcDiv{
+    border: 2px solid black;
+    width: 20.5vw;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    flex-basis: 100vw;
+
+ .inputCalc {
+        width:20.5vw;
+        height: 5vh;
+        border: 1px solid black;
+        position: relative;
+        font-size: 10px;
+        text-align: right;
+        font-style: italic;
+        color: red;
+        flex-basis: 100vw;
+       
+    } 
+
+.inputBox {
+    width:20.5vw;
+    height: 10vh;
+    border: 1px solid darkblue;
+    position: relative;
+    font-size: 20px;
+    text-align: right;
+    color: darkblue;
+    line-height: 10vh;
+    flex-basis: 100vw;
+   
+}
+
+.operators{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    flex-basis: 33.3vw;
+
+    >.btn{
+        width: 6.5vw;
+        height:7vh;
+        border: 2px solid darkblue;
+        position: relative;
+        margin:1px;
+       
+
+       &:hover{
+        background-color: darkgray;
+            }
+        
+            &#equal{
+            background-color: darkblue;
+            color: white;
+           }
+}
+}
+.numberButtons{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    flex-basis: 33.3vw;
+    >.btn-numb{
+        width: 6.5vw;
+        height:7vh;
+        border: 2px solid darkblue;
+        position: relative;
+        margin:1px;
+       
+       &:hover{
+        background-color: darkgray;
+            }
+        }
+           >.btn-jednako{
+            width: 6.5vw;
+            height:7vh;
+            border: 2px solid darkblue;
+            position: relative;
+            margin:1px;
+           
+           &:hover{
+            background-color: white;
+                }
+            
+                &#equal{
+                background-color: darkblue;
+                color: white;
+               }   
+    }
+}
+}
+
+
+
+
+
+
+
+
+   
+ 
+ 
+    
+
