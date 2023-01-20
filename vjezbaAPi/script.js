@@ -3,7 +3,7 @@ const input = document.querySelector('#city-input');
 let weatherIconSrc = document.querySelector('.weather-icon #icon-img');
 let IconDisplay = document.querySelector('.weather-icon');
 const searchBtn = document.getElementById('search-button');
-const h1City = document.querySelector('#city');
+const h2City = document.querySelector('#h2-cityName');
 const divRez = document.querySelector('#rezultat');
 const divRez2 = document.querySelector('#rezultat2');
 const divRez3= document.querySelector('#rezultat3');
@@ -37,6 +37,7 @@ request.onload =  () => { //ako ide target.response umjesto request.response ond
     const pressure = responseObject.main.pressure;
     const wind = responseObject.wind.speed;
     const vrijeme = responseObject.weather[0].description;
+    const clouds = responseObject.clouds.all;
     const icon = responseObject.weather[0].icon;
     //DZ ikonicu riješio, trebam još Clouds, Humidity, Wind, Pressure, Vrijeme
     const urlDio = `http://openweathermap.org/img/w/`; //"http://openweathermap.org/img/w/"
@@ -47,10 +48,12 @@ request.onload =  () => { //ako ide target.response umjesto request.response ond
    
 //naći na openWeather u example kodu
      divRez.innerHTML = `Temperatura je: <b>${temperature}&#8451;</b>`;
+     divRez6.innerHTML=` Oblaci: <b>${clouds}</b>`; 
      divRez2.innerHTML = `Vlažnost zraka je: <b>${humidity} %</b>`;
      divRez3.innerHTML= `Vjetar: <b>${wind} m/s</b>`;
      divRez4.innerHTML= `Tlak zraka: <b>${pressure} hPa</b>`;
-     divRez5.innerHTML=` Vrijeme: <b>${vrijeme}</b>`;   
+     divRez5.innerHTML=` Vrijeme: <b>${vrijeme}</b>`;  
+     h2City.textContent=input.value; 
                         
                         ;
     }
@@ -62,6 +65,7 @@ request.onload =  () => { //ako ide target.response umjesto request.response ond
         divRez4.innerHTML='';
         divRez5.innerHTML='';
         divRez6.innerHTML='';
+     
     }
     else{
         h1City.innerText = 'Dogodila se pogreška, pokušajte ponovno s unosom!';
