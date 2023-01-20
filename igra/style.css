@@ -1,0 +1,7 @@
+.showHide > .btnShowHide {
+  width: 200px;
+  height: 100px;
+}
+.showHide > .btnShowHide > .p-class > .hide {
+  visibility: hidden;
+}/*# sourceMappingURL=style.css.map */

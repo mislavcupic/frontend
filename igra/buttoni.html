@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>The Element Object</h1>
+    <h2>The addEventListener() Method</h2>
+
+    <div class="input"><input type="text" class="inputBox" /></div>
+
+    <div class="buttons">
+      <button class="btn" value="btn1">Try it</button>
+      <button class="btn" value="btn2">Try 2</button>
+      <button class="btn" value="btn3">Try 3</button>
+      <button class="btn" value="btn4">Try 4</button>
+      <button class="btn" val3ue="btn5">Try 5</button>
+    </div>
+
+    <div class="showHide">
+      <button class="btnShowHide" value="btnSH">
+        <p class="p-class">Show</p>
+      </button>
+    </div>
+
+    <script>
+      let inputBox = document.querySelector(".inputBox");
+      var buttoni = document.querySelectorAll(".buttons >.btn");
+      let showHide = document.querySelector(".showHide > .btnShowHide");
+      let pKl = document.querySelector(".showHide > .btnShowHide >.p-class");
+      function myFunction(e) {
+        var target = e.target;
+
+        for (i = 0; i < buttoni.length; i++) {
+          if (target == buttoni[i]) {
+            inputBox.value += buttoni[i].value;
+          }
+        }
+        if (target.value === "btn2") {
+          console.log("Jebenica");
+        }
+      }
+
+      for (i = 0; i < buttoni.length; i++) {
+        btns = buttoni[i];
+        btns.addEventListener("click", myFunction);
+      }
+
+      function handleMOver(e) {
+        pKl.classList.toggle("hide");
+        pKl.textContent = "Hide";
+      }
+
+      function handleMOut(e) {
+        if (showHide.click) {
+          pKl.textContent = "Show";
+          showHide.removeEventListener("mouseover", handleMOver);
+        }
+      }
+
+      showHide.addEventListener("mouseover", handleMOver);
+      showHide.addEventListener("click", handleMOut);
+    </script>
+  </body>
+</html>
