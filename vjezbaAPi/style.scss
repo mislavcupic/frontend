@@ -1,9 +1,12 @@
 .weather-icon{
-    
+    width:8vw;
+    height:10vh;
+   
+   
     >#icon-img {
-        width:8vw;
-        height:10vh;
         display:block;
+        left: 50%;
+        position: relative;
   
 
     }
