@@ -39,7 +39,7 @@ const drinkIngredients = document.querySelector('.drink-ingredients');
 const cocktailList=[];
 const listaImena = [];
 const idOdabranihPića = [];
-let liContainer = [];
+const liContainer = [];
 
 
 
@@ -129,13 +129,17 @@ request.send();
   
 //OVO ĆE SVE BITI TEST PA AKO NEKAJ PUKNE BRIŠI SVE POD OVIM KOMENTARIMA
 const handleLinks = () => {
+      console.log('ovdje smo');
       
+     
 
   for(i=0;i<idOdabranihPića.length;i++){
-    liContainer.setAttribute('href',url2);
+   
+      
     
-    const url2 = `https://thecocktaildb.com/api/json/v1/1/lookup.php?i=${liContainer[i].id}`;
-    liContainer.href += url2;
+    const url2 = `https://thecocktaildb.com/api/json/v1/1/lookup.php?i=${idOdabranihPića[i]}`;
+  //  liContainer.setAttribute('href',url2);
+  console.log(idOdabranihPića[i]);
     const request2 = new XMLHttpRequest();
     request2.open('GET', url2, true);
     console.log(request2);
@@ -145,7 +149,8 @@ const handleLinks = () => {
   
    if(request2.status===200){
     const responseObject2 = JSON.parse(request2.response);
-    drinkIngredients = responseObject2.drinks[i].strDrink;
+     console.log(responseObject2);
+    // drinkIngredients = responseObject2.drinks[i].idDrinks[i];
 
     //UBACI OVDJE 
 
@@ -156,12 +161,17 @@ const handleLinks = () => {
 
  
  request2.send();
- childLi.addEventListener('click',handleLinks);
+
   
 }
+
+  }
+
+
+for(i=0;i<liContainer.length;i++){
+    const odabranoPice=idOdabranihPića[i];
+    odabranoPice.addEventListener('click',handleLinks);
 }
-
-
 
 const handleInputSearch = () =>{
     const p = document.createElement('span');
