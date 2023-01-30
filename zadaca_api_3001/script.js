@@ -36,7 +36,7 @@ const drinkImg = document.querySelector('.drink-img');
 const drinkDescription = document.querySelector('.drink-description');
 const drinkIngredients = document.querySelector('.drink-ingredients');
 
-const cocktailList=[];
+const coctailList=[];
 const listaImena = [];
 const idOdabranihPića = [];
 const liContainer = [];
