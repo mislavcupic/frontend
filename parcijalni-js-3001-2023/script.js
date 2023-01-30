@@ -26,7 +26,7 @@ else if (songName===''){
 
    request.onload = () => {
     if(request.status ===200){
-        divMessage.innerText="...downloading..."
+        divMessage.innerText="...downloading...";
         console.log('req onload ok');
         const responseObject = JSON.parse(request.response);///e.target.response tu može ići i e.target.response
         //console.log(e);
