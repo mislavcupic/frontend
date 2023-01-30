@@ -150,7 +150,7 @@ const handleLinks = () => {
    if(request2.status===200){
     const responseObject2 = JSON.parse(request2.response);
      console.log(responseObject2);
-    // drinkIngredients = responseObject2.drinks[i].idDrinks[i];
+    drinkIngredients.innerText+= responseObject2.drinks[0].strInstructions;
 
     //UBACI OVDJE 
 
