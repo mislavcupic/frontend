@@ -1,0 +1,14 @@
+.inputSearch {
+  border: 2px dashed solid;
+  background-color: rgb(220, 207, 207);
+  color: red;
+  width: 200px;
+  height: 50px;
+}
+
+.search-result {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  color: black;
+}/*# sourceMappingURL=style.css.map */

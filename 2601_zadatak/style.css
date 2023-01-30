@@ -1,0 +1,30 @@
+.container {
+  display: block;
+  width: 100 vw;
+  height: 10 vh;
+  background-color: lightblue;
+}
+.container:hover.addItem {
+  width: 100px;
+  height: 50px;
+  background-color: aqua;
+}
+.container .listItem {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 50vw;
+}
+.container .listItem > .checkbox {
+  position: relative;
+}
+.container .listItem > .itemText {
+  position: relative;
+}
+.container .listItem > .remove {
+  position: relative;
+  height: 95%;
+  top: 5px;
+  left: 48vw;
+}/*# sourceMappingURL=style.css.map */
