@@ -91,7 +91,7 @@ request.onload =  () => { //ako ide target.response umjesto request.response ond
      idOdabranihPića[i] = responseObject.drinks[i].idDrink;
        
          childLi.setAttribute('id',idOdabranihPića[i]);
-liContainer[i] += childLi.id;
+// liContainer[i] += childLi.id; //maknuo sam [i]
     
     console.log(drinkIngredients);
     
@@ -131,7 +131,7 @@ request.send();
 const handleLinks = () => {
       console.log('ovdje smo');
       
-     
+   
 
   for(i=0;i<idOdabranihPića.length;i++){
    
@@ -139,11 +139,13 @@ const handleLinks = () => {
     
     const url2 = `https://thecocktaildb.com/api/json/v1/1/lookup.php?i=${idOdabranihPića[i]}`;
   //  liContainer.setAttribute('href',url2);
+
+ 
   console.log(idOdabranihPića[i]);
     const request2 = new XMLHttpRequest();
     request2.open('GET', url2, true);
     console.log(request2);
-    
+  
    
  request2.onload = () => {
   
@@ -156,19 +158,20 @@ const handleLinks = () => {
 
    
    }
+
   else console.log('nešto se strgalo');
  };
-
+  
  
  request2.send();
 
-  
+} 
 }
+  
 
-  }
 
 
-for(i=0;i<liContainer.length;i++){
+for(i=0;i<idOdabranihPića.length;i++){
     const odabranoPice=idOdabranihPića[i];
     odabranoPice.addEventListener('click',handleLinks);
 }
