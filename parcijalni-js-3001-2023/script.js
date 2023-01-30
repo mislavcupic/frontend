@@ -73,6 +73,6 @@ const handleInputSearch = () => {
 
 
  inputSearch.addEventListener('change', handleInputSearch);
- inputSearch.addEventListener('click',handleSearch);
+ inputSearch.addEventListener('change',handleSearch);
  
 
